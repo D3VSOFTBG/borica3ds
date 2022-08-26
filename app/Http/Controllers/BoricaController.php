@@ -36,12 +36,6 @@ class BoricaController extends Controller
     }
     public function statusCheckRequest()
     {
-        // dd($_POST);
-        // $isSuccessfulPayment = (new SaleResponse())
-        // ->setPublicKey('/home/wintrav/borica3d.wintravelbg.com/test_keys/wintravel-test.crt')
-        // ->setResponseData($_POST); //Set POST data from borica response
-        // return $isSuccessfulPayment;
-
         $statusCheckRequest = (new StatusCheckRequest())
         //->inDevelopment()
         ->setPublicKey('test.crt')
