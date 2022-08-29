@@ -18,7 +18,7 @@ class BoricaController extends Controller
         $p = Payment::findOrFail($id);
         $sale = (new SaleRequest())
             ->setMerchantName('Example')
-            ->setAmount($p->amount)
+            ->setAmount(1.95583 * $p->amount + $p->amount * 0.02)
             ->setOrder($id)
             ->setCurrency('BGN')
             ->setDescription('Example: '.$p->note)
